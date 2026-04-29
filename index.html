@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kristian Lund - Økonomistudent</title>
+    <title>Kristian Lund - Portefølje</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -25,7 +25,7 @@
             <img src="images/kristian_lund.jpeg" alt="Profilbilde av Kristian Lund">
         </div>
         <h1>Kristian Lund</h1>
-        <p class="subtitle">Økonomistudent | Finansiell Analyse | Økonomi</p>
+        <p class="subtitle">Økonomistudent | Master-Student </p>
     </header>
 
     <nav>
@@ -42,8 +42,8 @@
             <h2>Om meg</h2>
             <div class="om-meg-content">
                 <div class="om-meg-text">
-                    <p>Jeg er en drevet økonomistudent med lidenskap for finansiell analyse, økonomi og datadrevne løsninger. Med solid bakgrunn i makro- og mikroøkonomi, står jeg parat til å takle komplekse økonomiske utfordringer.</p>
-                    <p>Mitt fokus ligger på å anvende økonomiske prinsipper i praktiske situasjoner, og jeg er interessert i areas som investeringsanalyse, risikostyring og strategisk økonomisk planlegging.</p>
+                    <p>Jeg er en økonomistudent med særlig interesse for finansiell analyse, økonomi og datadrevne løsninger. Jeg liker å jobbe med praktiske problemstillinger, og bruker både makro- og mikroøkonomi til å finne gode svar.</p>
+                    <p>Jeg er spesielt opptatt av investeringsanalyse, risikostyring og strategisk økonomisk planlegging.</p>
                 </div>
                 <div class="stats">
                     <div class="stat-box">
@@ -51,18 +51,34 @@
                         <div class="stat-label">År som Student</div>
                     </div>
                     <div class="stat-box">
-                        <div class="stat-number">25+</div>
+                        <div class="stat-number">10+</div>
                         <div class="stat-label">Emner Gjennomgått</div>
                     </div>
                     <div class="stat-box">
-                        <div class="stat-number">8.5</div>
+                        <div class="stat-number">5,1</div>
                         <div class="stat-label">Gjennomsnittskarakter</div>
                     </div>
                     <div class="stat-box">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Dedikasjon</div>
+                        <div class="stat-number">Alltid</div>
+                        <div class="stat-label">Lærevillig</div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Skills seksjon -->
+        <section id="skills" data-stagger>
+            <h2>Ferdigheter</h2>
+            <p class="section-lead">Områder jeg har jobbet med</p>
+            <div class="skills-grid">
+                <div class="skill-card">Finansiell analyse</div>
+                <div class="skill-card">Kvantitativ analyse</div>
+                <div class="skill-card">Risikostyring</div>
+                <div class="skill-card">Regnskapsforståelse</div>
+                <div class="skill-card">Datadrevne beslutninger</div>
+                <div class="skill-card">Kommunikasjon</div>
+                <div class="skill-card">Excel / Power BI</div>
+                <div class="skill-card">Økonomisk problemløsning</div>
             </div>
         </section>
 
@@ -211,6 +227,7 @@
             return { num, decimals, hasPlus };
         };
         const animateCount = (el) => {
+            if (!/[0-9]/.test(el.textContent || '')) return;
             const { num, decimals, hasPlus } = parseNumber(el.textContent);
             const dur = 1200;
             const start = performance.now();
